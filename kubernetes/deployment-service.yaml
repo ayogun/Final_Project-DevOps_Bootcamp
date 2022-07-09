@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+   #the Serivce Name- it should match with the lable name of the deployment 
+  name: demo-react-app
+spec:
+  #type of the service
+  type: NodePort
+  selector:
+    app: demo-react-app
+  ports:
+  - port: 3050
+    targetPort: 3000
+    protocol: TCP
+    nodePort: 31000

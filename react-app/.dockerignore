@@ -1,0 +1,5 @@
+build
+.dockerignore
+Dockerfile
+.gitlab-ci.yml
+terraform-ecs-fargate

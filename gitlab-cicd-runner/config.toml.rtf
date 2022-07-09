@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf2 \CocoaLigature0 concurrent = 1\
+check_interval = 0\
+\
+[session_server]\
+  session_timeout = 1800\
+\
+[[runners]]\
+  name = "protein-bootcamp"\
+  url = "https://gitlab.com/"\
+  token = "7XeZpmyZbPT2FyLXYeWT"\
+  executor = "shell"\
+  [runners.custom_build_dir]\
+  [runners.cache]\
+    [runners.cache.s3]\
+    [runners.cache.gcs]\
+    [runners.cache.azure]\
+\
+[[runners]]\
+  name = "protein-devops-bootcamp"\
+  url = "https://gitlab.com/"\
+  token = "Rd1Y4JFtFvVd-FWf_szY"\
+  executor = "docker"\
+  [runners.custom_build_dir]\
+  [runners.cache]\
+    [runners.cache.s3]\
+    [runners.cache.gcs]\
+    [runners.cache.azure]\
+  [runners.docker]\
+    tls_verify = false\
+    image = "alpine:latest"\
+    privileged = false\
+    disable_entrypoint_overwrite = false\
+    oom_kill_disable = false\
+    disable_cache = false\
+    volumes = ["/cache"]\
+    shm_size = 0\
+}

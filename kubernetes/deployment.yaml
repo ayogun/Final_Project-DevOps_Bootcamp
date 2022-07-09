@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  #the Deployment Name
+  name: demo-react-app
+spec:
+  #the Number of Pods
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-react-app
+  template:
+    metadata:
+      labels:
+        app: demo-react-app
+    spec:
+      # Container Details
+      containers:
+      
+      - name: demo-react-app
+        # Docker Image
+        image: yogun/react:latest
+        resources:
+         #cpu and memory limit
+          limits:
+            memory: "550Mi"
+            cpu: "500m"
+        ports:
+        #the port on which the app can be reached out inside the container
+        - containerPort: 80
