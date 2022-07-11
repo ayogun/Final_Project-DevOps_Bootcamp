@@ -10,6 +10,23 @@ ___
 
 </br>
 
+
+## Context
+</br>
+
+1. [Scope](#scope)
+2. [Technologies](#technologies)
+3. [Application](#application)
+4. [Configuration](#configuration)
+
+
+
+</br>
+
+___
+
+</br>
+
 ## Scope
 In the bonus part of the project some additional tasks were assigned. Many of them are integrated to project itself, though two of them were semi-integrated projects. The task is put into words as:
 
