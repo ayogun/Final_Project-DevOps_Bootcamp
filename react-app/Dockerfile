@@ -7,9 +7,6 @@ WORKDIR /my-app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH="./node_modules/.bin:$PATH"
 
-# install app dependencies
-
-
 # add app
 COPY . .
 

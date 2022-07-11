@@ -2,8 +2,8 @@
 # With gratitude to Yunus Yasar who has been dedicated DevOps tutor during the bootcamp.
 
 variables:      # Variables to be used to pass data to jobs.
-  DOCKERHUB_LOGIN: yogun
-  DOCKERHUB_PASS: X612440x:)
+  DOCKERHUB_LOGIN: some_login
+  DOCKERHUB_PASS: somepass
   IMAGE_NAME: react
   TAG_LATEST: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
   DOCKER_TLS_CERTDIR: ""
@@ -21,12 +21,12 @@ build:      # Stage 1: Build the project
   image: node
   script: 
     - echo "Start building App"
-    - npm install
-    - npm run build
+    - npm install       # Install dependencies
+    - npm run build     # Build the project
     - echo "Build successfully!"
   artifacts:
     paths:
-      - build/
+      - build/    # Path to the build output
 
 
 test:         # Stage 2: Run tests
@@ -34,25 +34,24 @@ test:         # Stage 2: Run tests
   image: node
   script:
     - echo "Testing App"
-    - CI=true npm test
-    - echo "Test successfully!"
+    - CI=true npm test # Run tests with CI=true, because we are in a CI environment and we don't want an interactive prompt.
 
-image-push-amazon:       # Stage 3: Build the docker image and push it to AWS ECR
+image-push-amazon:       # Stage 3-a: Build the docker image and push it to AWS ECR
   stage: image-push
   image: docker:latest
   services: 
     - name: docker:20.10.17-dind
-  before_script:
+  before_script:    # Before the script, we need to install necessary packages.
     - apk add --no-cache python3 py3-pip
     - pip3 install --no-cache-dir awscli
-  script:
+  script:     # Push the image to AWS ECR
     - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
     - docker pull $TAG_LATEST || true
     - docker build --cache-from $TAG_LATEST -t $TAG_LATEST .
     - docker push $TAG_LATEST
     - echo "Contain has been built successfuly and pushed to AWS ECR"
   
-image-push-docker:       # Stage 4: Build the docker image and push it to Docker Hub
+image-push-docker:       # Stage 3-b: Build the docker image and push it to Docker Hub
   stage: image-push
   image: docker:latest
   services: 
@@ -64,7 +63,8 @@ image-push-docker:       # Stage 4: Build the docker image and push it to Docker
     - docker image push ${DOCKERHUB_LOGIN}/react:latest
     - echo "Contain has been built successfuly and pushed to Docker Hub"
 
-s3-deployment:         # Stage 5: Deploy the app to the production server
+# Stage 4-a: Deploy the app to AWS S3
+s3-deployment: 
   stage: deploy
   dependencies:
     - build
@@ -72,8 +72,9 @@ s3-deployment:         # Stage 5: Deploy the app to the production server
   script:
     - echo "deploying app"
     - pip install awscli
-    - aws s3 sync ./build/ s3://protein-bootcamp-prod/ 
-     
+    - aws s3 sync ./build/ s3://protein-bootcamp-prod/ # Deploy the app to AWS S3
+
+# Stage 4-b-1: Deploy the app to AWS ECS cluster, in this stage with terraform we first validate our terraform files   
 terraform-validate:
   stage: deploy
   image:
@@ -91,6 +92,7 @@ terraform-validate:
   script:
     - terraform validate
 
+# Stage 4-b-2: Deploy the app to AWS ECS cluster, in this stage with terraform we first plan our terraform files and check if everything is okay  
 terraform-plan:
   stage: deploy
   image:
@@ -111,7 +113,7 @@ terraform-plan:
     - terraform-validate
 
 
-
+# Stage 4-b-3: Deploy the app to AWS ECS cluster, in this stage with terraform we apply our terraform files and check if everything was okay in previous step
 terraform-apply:
   stage: deploy
   image:
