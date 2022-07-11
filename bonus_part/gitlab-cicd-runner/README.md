@@ -41,9 +41,12 @@ ___
 ## Technologies
 In this project we use GitLab CI/CD for our pipeline. Instead of using GitLab runners, we need our own machine where our computation will be processed. For this pupose, I've used AWS EC2 machines. For EC2 machine, I've used Linux/GNU with Debian distro but you can use any other distros. But be advised that dependincies may vary regarding to the distro.
 
+
+<span>
 <img src="https://img.shields.io/badge/gitlab%20-%23181717.svg?&style=for-the-badge&logo=gitlab&logoColor=white"/>
 <img src="https://img.shields.io/badge/AWS%20-%23FF9900.svg?&style=for-the-badge&logo=amazon-aws&logoColor=white"/>
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+</span>
 
 </br>
 
