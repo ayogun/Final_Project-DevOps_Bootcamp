@@ -6,17 +6,17 @@ In order to use this script in your system, you may need some services to be ins
 
 ```bash
 
-sudo apt-get update
-sudo apt-get -y install mailutils
-apt-get install ssmtp -y
+$ sudo apt-get update
+$ sudo apt-get -y install mailutils
+$ apt-get install ssmtp -y
 
 ```
 
-You should make necessary configuration. In order to do that, you should go to ssmtp.conf file and replace the variables inside the configuration file. This configuration file has been prepared for GMAIL SSMTP SERVER. If you want to use another e-mail service provider, you should change the ssmtp address and of course your credentials. THe configuration file might be accessed with:
+You should make necessary configuration. In order to do that, you should go to ssmtp.conf file and replace the variables inside the configuration file. This configuration file has been prepared for GMAIL SSMTP SERVER. If you want to use another e-mail service provider, you should change the ssmtp address and of course your **credentials**. The configuration file can be accessed with:
 
 ```bash
 
-nano /etc/ssmtp/ssmtp.conf 
+$ nano /etc/ssmtp/ssmtp.conf 
 
 ```
-
+If you run the script first time, it will automatically generate a cronjob for the script if it doesn't exist and it checks every minute if the job is listed in crontab. This is the default behaviour of the script. You can turn this off with commenting out the `create_cronjob` function in the script.

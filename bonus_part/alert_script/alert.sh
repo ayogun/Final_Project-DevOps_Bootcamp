@@ -8,6 +8,16 @@
 #	    	the the disk useage is more than %90.   					  |
 ###########################################################################
 
+ #This function creates cronjob to run this script every minutes, if it doesn't exist.
+create_cronjob(){
+        full_path=`realpath $0`
+        crons=`crontab -l 2>&1`
+        if [[ $crons != *"$full_path"* ]]; then
+                cron="* * * * * root $full_path"
+                (crontab -l ; echo "$cron") | crontab - >> /dev/null
+        fi
+}
+
 # Get partition name
 PARTITION=$(df / | grep / | awk '{print $1}')
 
@@ -34,3 +44,5 @@ then
     # Sent an email to specified address with given information
     echo -e $BODY | mail -s "$SUBJECT" $TO
 fi
+
+create_cronjob
