@@ -1,8 +1,8 @@
 # No More GitLab Runner
 
-Free GitLab runners are perfect for personal small projects since they are free and accessable and fully managed. On the other hand it is slightly slow. And the reason is obvios. Because they are shared with other users. 
+Free GitLab runners are perfect for personal small projects since they are free and available and fully managed. On the other hand it is slightly slow. And the reason is obvious. Because they are shared with other users. 
 
-Ain't we tired of old and slow GitLab Runners? Then this proeject is cut out exactly for you.
+Ain't we tired of old and slow GitLab Runners? If the answer is yes, then this project is cut out exactly for you.
 
 </br>
 
@@ -62,7 +62,7 @@ ___
 
 2. **Create an EC2 machine:**
 
-	>I use t2.micro machine since it will be enough for my projet and it is free-tier eligible. Don't forget to choose your PEM because we will use it in net step.
+	>I use t2.micro machine since it will be enough for my projet and it is free-tier eligible. Don't forget to choose your PEM because we will use it in next step.
 
 	</br>
 
@@ -122,6 +122,8 @@ ___
 	As default GitLab use shared runners. So, stop shared runners to use your runners to carry out your pipe line executions.
 
 	<img src="../../img/activate-runner.png">
+
+	Click the button shown in the image in order to activate your runners.
 
 </br>
 
