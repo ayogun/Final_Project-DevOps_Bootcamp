@@ -40,15 +40,11 @@ I've used minikube and docker deamon instead of a VM. One of the curses of using
 
 ## First File :  **deployment.yaml**
 
----
-
 [In this file](./deployment.yaml) I've used the [docker image](https://hub.docker.com/repository/docker/yogun/react)that I pushed to my DockerHub registry. Due to the reason of I have limited resources on my local machine, I gave a CPU and Memory limit to this container. I opened 3000 port for React App, which is actually default port used by React App.
 
 </br>
 
 ## Second File :  **deployment-service.yaml**
-
----
 
 Kubernetes Pods are created and destroyed to match the desired state of our cluster. Pods are nonpermanent resources. Kubernetes can create and destroy Pods dynamically and every time they are created, they get new IP. This create a problem to communicate with them. This is why, I need an abstraction level on pods. 
 
