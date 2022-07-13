@@ -27,4 +27,4 @@ spec:
             cpu: "500m"
         ports:
         #the port on which the app can be reached out inside the container
-        - containerPort: 80
+        - containerPort: 3000
