@@ -35,6 +35,8 @@ test:         # Stage 2: Run tests
   script:
     - echo "Testing App"
     - CI=true npm test # Run tests with CI=true, because we are in a CI environment and we don't want an interactive prompt.
+  dependencies:
+    - build
 
 image-push-amazon:       # Stage 3-a: Build the docker image and push it to AWS ECR
   stage: image-push
@@ -50,6 +52,8 @@ image-push-amazon:       # Stage 3-a: Build the docker image and push it to AWS 
     - docker build --cache-from $TAG_LATEST -t $TAG_LATEST .
     - docker push $TAG_LATEST
     - echo "Contain has been built successfuly and pushed to AWS ECR"
+  dependencies:
+    - test
   
 image-push-docker:       # Stage 3-b: Build the docker image and push it to Docker Hub
   stage: image-push
@@ -62,6 +66,8 @@ image-push-docker:       # Stage 3-b: Build the docker image and push it to Dock
     - docker image tag react:latest ${DOCKERHUB_LOGIN}/react:latest
     - docker image push ${DOCKERHUB_LOGIN}/react:latest
     - echo "Contain has been built successfuly and pushed to Docker Hub"
+  dependencies:
+    - test
 
 # Stage 4-a: Deploy the app to AWS S3
 s3-deployment: 

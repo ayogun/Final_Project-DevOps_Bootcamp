@@ -3,6 +3,11 @@ In the bonus part of the project some additional tasks were assigned. Many of th
 
 Hereby, under this directory, you can find them in two seperated folders as [alert_script](./alert_script/) and [gitlab-cicd-runner](./gitlab-cicd-runner/). 
 
+Rest of the bonus part can be found with these links: 
+- [ASG](../react-app/terraform-ecs-fargate/asg.tf)
+- [CloudWatch Dashboard](../react-app/terraform-ecs-fargate/dashboard.tf)
+- [AWS Architecture](../img/aws-artchitecture.png)
+
 ## What were the tasks?
 
 1. [alert_script](./alert_script/) : A script that sends an e-mail if the disk usage exceeds 90% .
