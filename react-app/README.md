@@ -2,14 +2,36 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).It is empowered with GitLab CI/CD and Docker.
 
-# About
+</br>
 
-Here I have a simple primitive React App. With [Dockerfile](./Dockerfile), I dockerize my React App. I try to keep this docker image
-as small as possible with `.dockerignore` file.
+# Content
+
+1. [About](#about)
+2. [Dockerize](#dockerfile)
+3. [Deployment](#deployment)
+	- [Terraform](#terraform)
+		- [main.tf](#maintf)
+		- [asg.tf](#asgtf)
+		- [dashboard.tf](#dashboardtf)
+		- [provider.tf](#providertf)
+		- [vars.tf](#varstf)
+		- [versions.tf](#versionstf)
+	- [CI/CD Pipeline](#cicd-pipeline)
+		- [Architecture](#pipeline-architecture)
+	- [AWS](#amazon-web-services)
+		- [Reources](#aws-resources)
+		- [Architecture](#aws-architecture)
 
 </br>
 
-# Dockerfile
+# About
+
+Here I have a simple primitive React App. With [Dockerfile](./Dockerfile), I dockerize my React App. I try to keep this docker image
+as small as possible with `.dockerignore` file. I deploy my React App on to AWS and provision my infrastructure witjh Terraform. In order to improve the efficiency, I built a CI/CD pipeline on GitLab.
+
+</br>
+
+# Dockerize
 
 In order to keep my docker image as small as possible, I've done 2 things:
 - I've used `.dockerignore` file to excluded unnecessary files
@@ -41,23 +63,44 @@ I use a GitLab CI/CD [pipeline](#pipeline) to carry out the deployment which I w
 
 ## Terraform
 
- Let's walk thorough a bit `.tf` files and fill the gap about how do I carry out these deployment neccessities with Terraform.
+ Let's walk thorough a bit `.tf` files and fill the gap about how do I carry out these deployment neccessities with Terraform. You can access all **Terraform** files [here under this directory](./terraform-ecs-fargate/) in `terraform-ecs-fargate` folder.
  </br>
 
 ### `main.tf`
+
+#### VPC
+
 - With `aws_default_vpc` I am starting a default vpc. A default VPC comes with a public subnet in each Availability Zone, an internet gateway, and settings to enable DNS resolution.
+
+#### SUBNET
+
 - The `aws_default_subnet` aws_default_subnet resource behaves differently from normal resources in that if a default subnet exists in the specified Availability Zone, Terraform does not create this resource, but instead "adopts" it into management. By default, a default subnet is a public subnet, because the main route table sends the subnet's traffic that is destined for the internet to the internet gateway. You can make a default subnet into a private subnet. But I want my subnet to bu public. In this resource, I specified my zone as `eu-central` which is Frankfurt region. For resiliance I created one subnet in each `AZ`.
 
+#### ECR
+
 - `aws_ecr_repository` provides an Elastic Container Registry Repository.
-- `aws_ecs_cluster` provides an ECS cluster.
-- `aws_ecs_task_definition` manages a revision of an ECS task definition to be used in aws_ecs_service. Here I specify that I want to use Fargate and I want to limit my containers' Memory and CPU.
+
+#### IAM
+
 - `aws_iam_role`provides an IAM role for ECS cluster.
 - `aws_iam_policy_document` generates an IAM policy document in JSON format for use with `aws_iam_role` resource.
+
+#### ALB
+
 - `aws_alb` is application load balancer which is placed in front of the services. In this service, I specifyto which subnets to direct the traffic.
 
 <img src="../img/lb.png">
 
+</br>
+
+#### SECURITY GROUP
+
 - with `aws_security_group` resouce provides a security group.
+
+#### ECS
+
+- `aws_ecs_cluster` provides an ECS cluster.
+- `aws_ecs_task_definition` manages a revision of an ECS task definition to be used in aws_ecs_service. Here I specify that I want to use Fargate and I want to limit my containers' Memory and CPU.
 - `aws_ecs_service` provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it. It allows us to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster. If any of our tasks should fail or stop for any reason, the Amazon ECS service scheduler launches another instance of our task definition to replace it in order to maintain the desired number of tasks in the service.
 
 <img src="../img/ecs-cluster.png">
@@ -173,9 +216,11 @@ As mentioned previously, this stage accomodates two child pipelines. More accura
 
 In `deploy` job, I am deploying my React App to AWS S3. By this way I am hoping to access my React App and represent a demo.
 
-Here is the link of my React App, if you would like to take a look at it:
+#### S3
 
-https://protein-bootcamp-prod.s3.eu-central-1.amazonaws.com/index.html
+>Here is the link of my React App, if you would like to take a look at it:
+
+>https://protein-bootcamp-prod.s3.eu-central-1.amazonaws.com/index.html
 
 If you are not willing to click the link, let me leave here an image for you to see how it works:)
 
@@ -194,7 +239,28 @@ So, here it seems my final succesfull pipeline run after a bunch of failure :)
 
 ## Amazon Web Services
 
-I use AWS as Cloud Provider in this projet. I tried to use Free-tier services. Anyway, it is always good practice to set an alert threshold in budget. Wathc out your money!
+I use AWS as Cloud Provider in this projet. I tried to use Free-tier services. Anyway, it is always good practice to set an alert threshold in budget. Watch out your money!
+
+### AWS Resources
+
+The services I've been using on AWS are like:
+
+- [ECS](#ecs)
+- [Fargate](#ecs)
+- [S3](#s3)
+- [IAM](#iam)
+- [Security Groups](#security-group)
+- [VPC](#vpc)
+- [Subnet](#subnet)
+- [ASG](#asgtf)
+- [CloudWatch](#dashboardtf)
+- [ECR](#ecr)
+- [IGW](#aws-architecture)
 
 ### AWS Architecture
 
+Here in this image below, you can see details of AWS architecture.
+
+<img src="../img/aws-architecture.png">
+
+In order to read further about the service itself, you can go the relevant section above in particular service.
