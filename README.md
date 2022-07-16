@@ -10,8 +10,14 @@ You will be able to find all necessary documents, you may possibly need to evalu
 
 # Content
 
-1. [Technologies](#technologies)
-2. []()
+1. [Technologies](#💻-technologies)
+2. [About](#clipboard-about)
+3. [Tasks](#whitecheckmark-tasks)
+	- [Bonus Part](#star-bonus)
+4. [Evaluation Guide](#🧭-evaluation-guide)
+5. [Contact](#📬-contact)
+
+</br></br>
 
 # 💻 Technologies
 

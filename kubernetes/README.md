@@ -10,17 +10,17 @@ Here I have two K8s yaml files. With this manual, I will walkyou thorough how to
 
 # Content
 
-1. [About](#about)
+1. [About](#clipboard-about)
 	- [deployment.yaml](#first-file--deploymentyaml)
 	- [deployment-service.yaml](#second-file--deployment-serviceyaml)
-2. [Architecture](#architecture)
-3. [Strategy](#strategy)
-	- [NodePort](#drawbacks-of-nodeport)
-4. [Requirements](#requirements)
-5. [Installation](#installation)
+2. [Architecture](#⚙️-architecture)
+3. [Strategy](#🧠-strategy)
+	- [NodePort](#x-drawbacks-of-nodeport)
+4. [Requirements](#heavyexclamationmark-requirements)
+5. [Installation](#hourglassflowingsand-installation)
 	- [Docker Installation](#docker-installation)
 	- [Minikube installation](#minikube-installation)
-6. [Application](#application)
+6. [Application](#electricplug-application)
 
 </br>
 </br>
