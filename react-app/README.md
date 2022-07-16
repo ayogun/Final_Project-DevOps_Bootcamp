@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 </br>
 
-# Content
+# :link: Content
 
 1. [Technologies](#computer-technologies)
 2. [About](#receipt-about)
@@ -23,7 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 		- [provider.tf](#providertf)
 		- [vars.tf](#varstf)
 		- [versions.tf](#versionstf)
-	- [CI/CD Pipeline](#♾️-cicd-pipeline)
+	- [CI/CD Pipeline](#infinity-cicd-pipeline)
 		- [Architecture](#gear-pipeline-architecture)
 	- [AWS](#cloud-amazon-web-services)
 		- [Reources](#aws-resources)
@@ -193,7 +193,7 @@ Here I specify dependincy about which Terraform version I need.
 </br>
 </br>
 
-## ♾️ CI/CD Pipeline
+## :infinity: CI/CD Pipeline
 
 For pipeline, I use [GitLab CI/CD](https://docs.gitlab.com/ee/ci/). In order to provision my pipeline, I use `.gitlab-ci.yml` file. 
 

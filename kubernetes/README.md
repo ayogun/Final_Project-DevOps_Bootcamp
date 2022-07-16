@@ -10,13 +10,13 @@ Here I have two K8s yaml files. With this manual, I will walkyou thorough how to
 	
 </br>
 
-# Content
+# :link: Content
 
 1. [About](#clipboard-about)
 	- [deployment.yaml](#first-file--deploymentyaml)
 	- [deployment-service.yaml](#second-file--deployment-serviceyaml)
-2. [Architecture](#⚙️-architecture)
-3. [Strategy](#🧠-strategy)
+2. [Architecture](#gear-architecture)
+3. [Strategy](#brain-strategy)
 	- [NodePort](#x-drawbacks-of-nodeport)
 4. [Requirements](#heavyexclamationmark-requirements)
 5. [Installation](#hourglassflowingsand-installation)
@@ -58,7 +58,7 @@ Kubernetes Pods are created and destroyed to match the desired state of our clus
 
 </br>
 
-# ⚙️ Architecture
+# :gear: Architecture
 
 I've used two nodes in my machine and represent the architecture regarding that. Please remember that it may divert according to your own personal use, though it will provide a bare insight. In representation, I've showed three pods. Please remember that in my YAML file I actually declared 2 pods.
 
@@ -69,7 +69,7 @@ I've used two nodes in my machine and represent the architecture regarding that.
 </br>
 </br>
 
-# 🧠 Strategy
+# :brain: Strategy
 
 Here I will try to share my strategy and my choices.
 - Normally, it is legal to define service and deployment in same YAML file. However, spare them in term of seperation of concerns.
