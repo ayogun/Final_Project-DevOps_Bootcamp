@@ -12,11 +12,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Content
 
-1. [Technologies](#💻-technologies)
-2. [About](#📋-about)
-3. [Dockerize](#📦-dockerize)
-4. [Deployment](#🚀-deployment)
-	- [Terraform](#🌱-terraform)
+1. [Technologies](#computer-technologies)
+2. [About](#receipt-about)
+3. [Dockerize](#package-dockerize)
+4. [Deployment](#rocket-deployment)
+	- [Terraform](#seedling-terraform)
 		- [main.tf](#maintf)
 		- [asg.tf](#asgtf)
 		- [dashboard.tf](#dashboardtf)
@@ -24,14 +24,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 		- [vars.tf](#varstf)
 		- [versions.tf](#versionstf)
 	- [CI/CD Pipeline](#♾️-cicd-pipeline)
-		- [Architecture](#⚙️-pipeline-architecture)
-	- [AWS](#☁️-amazon-web-services)
+		- [Architecture](#gear-pipeline-architecture)
+	- [AWS](#cloud-amazon-web-services)
 		- [Reources](#aws-resources)
-		- [Architecture](#⚙️-aws-architecture)
+		- [Architecture](#gear-aws-architecture)
 
 </br>
 
-# 💻 Technologies
+# :computer: Technologies
 
 <span>
 
@@ -58,14 +58,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </br>
 </br>
 
-# 📋 About
+# :receipt: About
 
 Here I have a simple primitive React App. With [Dockerfile](./Dockerfile), I dockerize my React App. I try to keep this docker image
 as small as possible with `.dockerignore` file. I deploy my React App on to AWS and provision my infrastructure witjh Terraform. In order to improve the efficiency, I built a CI/CD pipeline on GitLab.
 
 </br>
 
-# 📦 Dockerize
+# :package: Dockerize
 
 In order to keep my docker image as small as possible, I've done 2 things:
 - I've used `.dockerignore` file to excluded unnecessary files
@@ -80,7 +80,7 @@ Then, I've run the artifact with:
 $ npm start
 ```
 
-# 🚀 Deployment
+# :rocket: Deployment
 
 In order to provision my deployment, I've prepared a bunch of HCL files. With this HCL files' I aimied to deploy my React App on AWS ECS Fargate. My AWS ECS Fargate deployment infrastructure was specified with such **neccesities**:
 -  Application should be running on ECS Fargate.
@@ -95,7 +95,7 @@ I use a GitLab CI/CD [pipeline](#pipeline) to carry out the deployment which I w
 
 </br>
 
-## 🌱 Terraform
+## :seedling: Terraform
 
  Let's walk thorough a bit `.tf` files and fill the gap about how do I carry out these deployment neccessities with Terraform. You can access all **Terraform** files [here under this directory](./terraform-ecs-fargate/) in `terraform-ecs-fargate` folder.
  </br>
@@ -204,7 +204,7 @@ For pipeline, I use [GitLab CI/CD](https://docs.gitlab.com/ee/ci/). In order to 
 - AWS_ACCESS_KEY (I added as Masked Variables)
 - AWS_SECRET_KEY (I added as Masked Variables)
 
-### ⚙️ Pipeline Architecture
+### :gear: Pipeline Architecture
 
 I designed my pipeline with 4 stages and 9 jobs as seen in the figure:
 
@@ -271,7 +271,7 @@ So, here it seems my final succesfull pipeline run after a bunch of failure :)
 </br>
 </br>
 
-## ☁️ Amazon Web Services
+## :cloud: Amazon Web Services
 
 I use AWS as Cloud Provider in this projet. I tried to use Free-tier services. Anyway, it is always good practice to set an alert threshold in budget. Watch out your money!
 
@@ -291,7 +291,7 @@ The services I've been using on AWS are like:
 - [ECR](#ecr)
 - [IGW](#aws-architecture)
 
-### ⚙️ AWS Architecture
+### :gear: AWS Architecture
 
 Here in this image below, you can see details of AWS architecture.
 

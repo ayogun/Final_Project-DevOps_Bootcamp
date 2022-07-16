@@ -18,7 +18,7 @@ You will be able to find all necessary documents, which you may possibly need to
 
 1. [Technologies](#computer-technologies)
 2. [About](#clipboard-about)
-3. [Tasks](#whitecheckmark-tasks)
+3. [Tasks](#warning-tasks)
 	- [Bonus Part](#star-bonus)
 4. [Evaluation Guide](#satellite-evaluation-guide)
 5. [Contact](#mailbox-contact)
@@ -69,7 +69,7 @@ It is one page static web page. I accomodate the project in GitLab repository an
 
 </br>
 
-# :white_check_mark: Tasks
+# :warning: Tasks
 
 Tasks are mainly like that:
 - Create a basic React.js app.
