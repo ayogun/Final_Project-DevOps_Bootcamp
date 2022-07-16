@@ -88,6 +88,7 @@ Here I will try to share my strategy and my choices.
 
 - [Docker Desktop](#docker-installation)
 - [Minikube](#minikube-installation)
+- [Kubectl](#kubectl-installation)
 
 </br>
 
@@ -122,6 +123,35 @@ $ sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 PS: [Here](https://minikube.sigs.k8s.io/docs/start/) you can learn how to install minikube. 
 
 </br>
+
+## Kubectl Installation
+
+1. Download the proper binary according to your computer and it's chip. For my case I use this command below to download as M1 chip user:
+```bash
+$ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
+```
+
+2. Make the kubectl binary executable.
+```bash
+$ chmod +x ./kubectl
+```
+
+3. Move the kubectl binary to a file location on your system `PATH` with commands below.
+```bash
+$ sudo mv ./kubectl /usr/local/bin/kubectl
+$ sudo chown root: /usr/local/bin/kubectl
+```
+
+4. Test to ensure the version you installed is up-to-date:
+```bash
+$ kubectl version --client
+```
+
+PS: [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/) you can learn how to install minikube to your Mac. 
+
+
+</br>
+
 
 # Application
 
