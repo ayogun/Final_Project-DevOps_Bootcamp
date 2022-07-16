@@ -11,13 +11,13 @@ ___
 </br>
 
 
-## Context
+## Content
 </br>
 
-1. [Scope](#scope)
-2. [Technologies](#technologies)
-3. [Application](#application)
-4. [Configuration](#configuration)
+1. [Scope](#📋-scope)
+2. [Technologies](#💻-technologies)
+3. [Application](#🔌-application)
+4. [Configuration](#🔧-configuration)
 
 
 
@@ -27,7 +27,7 @@ ___
 
 </br>
 
-## Scope
+## 📋 Scope
 In the bonus part of the project some additional tasks were assigned. Many of them are integrated to project itself, though two of them were semi-integrated projects. The task is put into words as:
 
 > Instead of using GitLab's shared runners, you can configure your own runner. If you do so, please share the runner's config.toml and clarify the implementation process.
@@ -38,7 +38,7 @@ ___
 
 </br>
 
-## Technologies
+## 💻 Technologies
 In this project we use GitLab CI/CD for our pipeline. Instead of using GitLab runners, we need our own machine where our computation will be processed. For this pupose, I've used AWS EC2 machines. For EC2 machine, I've used Linux/GNU with Debian distro but you can use any other distros. But be advised that dependincies may vary regarding to the distro.
 
 
@@ -54,7 +54,7 @@ ___
 
 </br>
 
-## Application
+## 🔌  Application
 
 1. **[Create](https://portal.aws.amazon.com/billing/signup#/start/email) an AWS account and log in.**
 
@@ -137,7 +137,7 @@ ___
 
 </br>
 
-## Configuration
+## 🔧 Configuration
 
 You can change the behavior of GitLab Runner and of individual registered runners.
 

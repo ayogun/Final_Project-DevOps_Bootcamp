@@ -4,7 +4,7 @@ Under the scope of [DevOps Engineer Bootcamp](https://www.patika.dev/bootcamp/pr
 
 <img src="https://media-exp1.licdn.com/dms/image/C4E22AQGWLhpC7RNkCA/feedshare-shrink_800/0/1653037386116?e=1660780800&v=beta&t=gYgnLTLggFXgikzBdLVdOLV2Q5necveSLdXPXQzaBOE">
 
-You will be able to find all necessary documents, you may possibly need to evaluate the project.
+You will be able to find all necessary documents, which you may possibly need to evaluate the project.
 
 </br>
 
