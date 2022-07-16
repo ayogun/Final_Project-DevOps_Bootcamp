@@ -54,7 +54,7 @@ Kubernetes Pods are created and destroyed to match the desired state of our clus
 
 # Architecture
 
-I've used two nodes in my machine and represent the architecture regarding that. Please remember that it may divert according to your own personal use, though it will provide a bare insight.
+I've used two nodes in my machine and represent the architecture regarding that. Please remember that it may divert according to your own personal use, though it will provide a bare insight. In representation, I've showed three pods. Please remember that in my YAML file I actually declared 2 pods.
 
 </br>
 
