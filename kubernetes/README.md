@@ -219,7 +219,7 @@ Here we can get a quick summary about our cluster. As it seems, how many desired
 
 </br>
 
-5. Now we are ready. Let's access our React App:
+7.  Now we are ready. Let's access our React App:
 
 ```bash
 $ minikube service demo-react-app
