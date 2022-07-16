@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).It is empowered with GitLab CI/CD and Docker.
 
+</br>
+
 <p align="center">
 <img width="50%" src="https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg">
 </p>
