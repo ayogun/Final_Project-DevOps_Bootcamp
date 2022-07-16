@@ -8,14 +8,19 @@ You will be able to find all necessary documents, you may possibly need to evalu
 
 </br>
 
-# Technologies
+# Content
+
+1. [Technologies](#technologies)
+2. []()
+
+# 💻 Technologies
 
 <span>
 
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
 
 <img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white">
-
+ 
 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
 
 
@@ -41,8 +46,9 @@ You will be able to find all necessary documents, you may possibly need to evalu
 </span>
 
 </br>
+</br>
 
-# About
+# :clipboard: About
 
 The endeavour of this project is to complete all given tasks. Tasks are mentioned in [Tasks](#tasks) section. In order to accomplish that; I've prepared a very simple and primitive React App. 
 
@@ -51,7 +57,7 @@ It is one page static web page. I accomodate the project in GitLab repository an
 
 </br>
 
-# Tasks
+# :white_check_mark: Tasks
 
 Tasks are mainly like that:
 - Create a basic React.js app.
@@ -63,7 +69,7 @@ Tasks are mainly like that:
 - Application load balancer must be configured in front of the service.
 - Write the required core Kubernetes manifest files for Kubernetes deployment.
 
-## Bonus
+## :star: Bonus
 
 - Configure auto-scaling onto your Fargate instance. Scale-up when CPU is above %50 and scale-down when CPU is below %20.
 - Create the proper Cloudwatch dashboards and metrics for monitoring the performance of the application.
@@ -78,7 +84,7 @@ Tasks are mainly like that:
 
 </br>
 
-# Evaluation Guide
+# 🧭 Evaluation Guide
 
 Here I leave neccessary links for each assigned task. Simply by clicking them you can quickly jump into relevant section.
 
@@ -105,6 +111,7 @@ Here I leave neccessary links for each assigned task. Simply by clicking them yo
 
 ___
 
+# 📬 Contact
 
 >If you have any questions regarding the project you can contact me via:
 >- yogun@student.42heilbronn.de
