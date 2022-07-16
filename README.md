@@ -10,18 +10,18 @@ You will be able to find all necessary documents, which you may possibly need to
 
 </br>
 
-# Content
+# :link: Content
 
-1. [Technologies](#💻-technologies)
+1. [Technologies](#computer-technologies)
 2. [About](#clipboard-about)
 3. [Tasks](#whitecheckmark-tasks)
 	- [Bonus Part](#star-bonus)
-4. [Evaluation Guide](#🧭-evaluation-guide)
-5. [Contact](#📬-contact)
+4. [Evaluation Guide](#satellite-evaluation-guide)
+5. [Contact](#mailbox-contact)
 
 </br></br>
 
-# 💻 Technologies
+# :computer: Technologies
 
 <span>
 
@@ -92,7 +92,7 @@ Tasks are mainly like that:
 
 </br>
 
-# 🧭 Evaluation Guide
+# :satellite: Evaluation Guide
 
 Here I leave neccessary links for each assigned task. Simply by clicking them you can quickly jump into relevant section.
 
@@ -119,7 +119,7 @@ Here I leave neccessary links for each assigned task. Simply by clicking them yo
 
 ___
 
-# 📬 Contact
+# :mailbox: Contact
 
 >If you have any questions regarding the project you can contact me via:
 >- yogun@student.42heilbronn.de
