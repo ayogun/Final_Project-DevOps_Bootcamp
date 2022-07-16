@@ -30,11 +30,11 @@ ___
 </br>
 
 # About
-My Kubernetes cluster includes two pods and one master node.
+For my Kubernetes cluster I've done followings:
 
-In `deployment.yaml` file, I declared 2 replicas. I wanted to have more than one replica for resiliance and as less as possible due to the reason that I don't have enough resource on my local machine.
+- In `deployment.yaml` file, I declared 2 replicas. I wanted to have more than one replica for resiliance and as less as possible due to the reason that I don't have enough resource on my local machine.
 
-I've used minikube and docker deamon instead of a VM. One of the curses of using M1 chipped machine is not being able to use Vagrant. By this method, I've used containers as node.
+- I've used minikube and docker deamon instead of a VM. One of the curses of using M1 chipped machine is not being able to use Vagrant. By this method, I've used containers as node.
 
 </br>
 
