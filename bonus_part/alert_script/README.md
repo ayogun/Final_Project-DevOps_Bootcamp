@@ -2,6 +2,10 @@
 
 This script has planned to be schedully work every minute thanks to cron. It checks every minute if any of partitions or disks use exceed the 90% threshold value; and send an email to the specified user about alert. In my script it has been set as `proteindevops@gmail.com` but needs to be replaced according to user needs.
 
+<p align="center">
+<img width="50%" src="https://itsfoss.com/wp-content/uploads/2019/01/bash-logo.jpg">
+</p>
+
 In order to use this script in your system, you may need some services to be installed. You should install mailutils and ssmtp services. You can use the commands below:
 
 ```bash

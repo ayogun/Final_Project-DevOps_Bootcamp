@@ -6,6 +6,12 @@ Ain't we tired of old and slow GitLab Runners? If the answer is yes, then this p
 
 </br>
 
+<p align="center">
+<img width="50%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl_XKBCHh-Uk3SkTUAqOGh-gibYTKH_K6bc-wSTGNOV3ScVpcfMRAPKc9cbEyjDWo-DKI&usqp=CAU">
+</p>
+
+</br>
+
 ___
 
 </br>

@@ -3,16 +3,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).It is empowered with GitLab CI/CD and Docker.
 
 <p align="center">
-<img src="https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg">
+<img width="50%" src="https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg">
 </p>
 
 </br>
 
 # Content
 
-1. [About](#📋-about)
-2. [Dockerize](#📦-dockerize)
-3. [Deployment](#🚀-deployment)
+1. [Technologies](#💻-technologies)
+2. [About](#📋-about)
+3. [Dockerize](#📦-dockerize)
+4. [Deployment](#🚀-deployment)
 	- [Terraform](#🌱-terraform)
 		- [main.tf](#maintf)
 		- [asg.tf](#asgtf)
@@ -26,6 +27,33 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 		- [Reources](#aws-resources)
 		- [Architecture](#⚙️-aws-architecture)
 
+</br>
+
+# 💻 Technologies
+
+<span>
+
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+
+<img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white">
+ 
+<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
+
+</span>
+
+</br>
+
+<span>
+
+<img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
+
+<img src="https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white">
+
+<img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white">
+
+</span>
+
+</br>
 </br>
 
 # 📋 About
