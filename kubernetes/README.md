@@ -33,7 +33,7 @@ ___
 
 </br>
 
-# About
+# :clipboard:  About
 For my Kubernetes cluster I've done followings:
 
 - In `deployment.yaml` file, I declared 2 replicas. I wanted to have more than one replica for resiliance and as less as possible due to the reason that I don't have enough resource on my local machine.
@@ -56,7 +56,7 @@ Kubernetes Pods are created and destroyed to match the desired state of our clus
 
 </br>
 
-# Architecture
+# ⚙️ Architecture
 
 I've used two nodes in my machine and represent the architecture regarding that. Please remember that it may divert according to your own personal use, though it will provide a bare insight. In representation, I've showed three pods. Please remember that in my YAML file I actually declared 2 pods.
 
@@ -67,7 +67,7 @@ I've used two nodes in my machine and represent the architecture regarding that.
 </br>
 </br>
 
-# Strategy
+# 🧠 Strategy
 
 Here I will try to share my strategy and my choices.
 - Normally, it is legal to define service and deployment in same YAML file. However, spare them in term of seperation of concerns.
@@ -78,7 +78,7 @@ Here I will try to share my strategy and my choices.
 
 </br>
 
-## Drawbacks of Nodeport
+## :x: Drawbacks of Nodeport
 
 - The scale will be limited by the “nodePort” range number, because only one service per port can be configured.
 - By default, port range is limited in the rage 30000–32767. High ports usage could be problematic, from security perspective. In my project, I've used 31000 port. I've chosen it arbitrarily.
@@ -88,7 +88,7 @@ Here I will try to share my strategy and my choices.
 
 </br>
 
-# Requirements
+# :heavy_exclamation_mark: Requirements
 
 - [Docker Desktop](#docker-installation)
 - [Minikube](#minikube-installation)
@@ -96,7 +96,7 @@ Here I will try to share my strategy and my choices.
 
 </br>
 
-# Installation
+# :hourglass_flowing_sand: Installation
 
 ## Docker Installation
 1. Download `Docker.dmg`
@@ -157,7 +157,7 @@ PS: [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/) you ca
 </br>
 
 
-# Application
+# :electric_plug: Application
 
 I've used `minikube` due to it's simplicity. For minikube, Kubernetes says like this:
 
