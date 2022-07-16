@@ -2,36 +2,40 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).It is empowered with GitLab CI/CD and Docker.
 
+<p align="center">
+<img src="https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg">
+</p>
+
 </br>
 
 # Content
 
-1. [About](#about)
-2. [Dockerize](#dockerfile)
-3. [Deployment](#deployment)
-	- [Terraform](#terraform)
+1. [About](#📋-about)
+2. [Dockerize](#📦-dockerize)
+3. [Deployment](#🚀-deployment)
+	- [Terraform](#🌱-terraform)
 		- [main.tf](#maintf)
 		- [asg.tf](#asgtf)
 		- [dashboard.tf](#dashboardtf)
 		- [provider.tf](#providertf)
 		- [vars.tf](#varstf)
 		- [versions.tf](#versionstf)
-	- [CI/CD Pipeline](#cicd-pipeline)
-		- [Architecture](#pipeline-architecture)
-	- [AWS](#amazon-web-services)
+	- [CI/CD Pipeline](#♾️-cicd-pipeline)
+		- [Architecture](#⚙️-pipeline-architecture)
+	- [AWS](#☁️-amazon-web-services)
 		- [Reources](#aws-resources)
-		- [Architecture](#aws-architecture)
+		- [Architecture](#⚙️-aws-architecture)
 
 </br>
 
-# About
+# 📋 About
 
 Here I have a simple primitive React App. With [Dockerfile](./Dockerfile), I dockerize my React App. I try to keep this docker image
 as small as possible with `.dockerignore` file. I deploy my React App on to AWS and provision my infrastructure witjh Terraform. In order to improve the efficiency, I built a CI/CD pipeline on GitLab.
 
 </br>
 
-# Dockerize
+# 📦 Dockerize
 
 In order to keep my docker image as small as possible, I've done 2 things:
 - I've used `.dockerignore` file to excluded unnecessary files
@@ -46,7 +50,7 @@ Then, I've run the artifact with:
 $ npm start
 ```
 
-# Deployment
+# 🚀 Deployment
 
 In order to provision my deployment, I've prepared a bunch of HCL files. With this HCL files' I aimied to deploy my React App on AWS ECS Fargate. My AWS ECS Fargate deployment infrastructure was specified with such **neccesities**:
 -  Application should be running on ECS Fargate.
@@ -61,7 +65,7 @@ I use a GitLab CI/CD [pipeline](#pipeline) to carry out the deployment which I w
 
 </br>
 
-## Terraform
+## 🌱 Terraform
 
  Let's walk thorough a bit `.tf` files and fill the gap about how do I carry out these deployment neccessities with Terraform. You can access all **Terraform** files [here under this directory](./terraform-ecs-fargate/) in `terraform-ecs-fargate` folder.
  </br>
@@ -159,7 +163,7 @@ Here I specify dependincy about which Terraform version I need.
 </br>
 </br>
 
-## CI/CD Pipeline
+## ♾️ CI/CD Pipeline
 
 For pipeline, I use [GitLab CI/CD](https://docs.gitlab.com/ee/ci/). In order to provision my pipeline, I use `.gitlab-ci.yml` file. 
 
@@ -170,7 +174,7 @@ For pipeline, I use [GitLab CI/CD](https://docs.gitlab.com/ee/ci/). In order to 
 - AWS_ACCESS_KEY (I added as Masked Variables)
 - AWS_SECRET_KEY (I added as Masked Variables)
 
-### Pipeline Architecture
+### ⚙️ Pipeline Architecture
 
 I designed my pipeline with 4 stages and 9 jobs as seen in the figure:
 
@@ -237,7 +241,7 @@ So, here it seems my final succesfull pipeline run after a bunch of failure :)
 </br>
 </br>
 
-## Amazon Web Services
+## ☁️ Amazon Web Services
 
 I use AWS as Cloud Provider in this projet. I tried to use Free-tier services. Anyway, it is always good practice to set an alert threshold in budget. Watch out your money!
 
@@ -257,7 +261,7 @@ The services I've been using on AWS are like:
 - [ECR](#ecr)
 - [IGW](#aws-architecture)
 
-### AWS Architecture
+### ⚙️ AWS Architecture
 
 Here in this image below, you can see details of AWS architecture.
 
