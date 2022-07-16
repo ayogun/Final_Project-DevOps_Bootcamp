@@ -2,8 +2,10 @@
 
 Here I have two K8s yaml files. With this manual, I will walkyou thorough how to setup our react app in a K8s cluster with these two K8S files. 
 
-<img src="https://tomaszbazan.pl/wp-content/uploads/2021/01/minikube-logo.jpg">
-
+<p align="center">
+<img display="block" margin-left="auto" margin-right="auto" width="50%" src="https://tomaszbazan.pl/wp-content/uploads/2021/01/minikube-logo.jpg">
+</p>
+	
 </br>
 
 # Content
