@@ -10,7 +10,7 @@ Under the scope of [DevOps Engineer Bootcamp](https://www.patika.dev/bootcamp/pr
 
 </br>
 
-You will be able to find all necessary documents, which you may possibly need to evaluate the project.
+You will be able to find all necessary documents, which you may possibly need to evaluate the project. If you particularly landed on this page to evaluate this project, you can [click here](#satellite-evaluation-guide) to jump the section which I've prepared as evaluation guide.
 
 </br>
 
