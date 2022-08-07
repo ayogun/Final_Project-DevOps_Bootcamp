@@ -252,7 +252,7 @@ In `deploy` job, I am deploying my React App to AWS S3. By this way I am hoping 
 
 #### S3
 
->Here is the link of my React App, if you would like to take a look at it:
+>Here is the link of my React App, however it is not available now(hit me up if you would like to grant access):
 
 >https://protein-bootcamp-prod.s3.eu-central-1.amazonaws.com/index.html
 
