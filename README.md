@@ -4,10 +4,6 @@ Under the scope of [DevOps Engineer Bootcamp](https://www.patika.dev/bootcamp/pr
 
 </br>
 
-<p align="center">
-<img width="75%" src="https://media-exp1.licdn.com/dms/image/C4E22AQGWLhpC7RNkCA/feedshare-shrink_800/0/1653037386116?e=1660780800&v=beta&t=gYgnLTLggFXgikzBdLVdOLV2Q5necveSLdXPXQzaBOE">
-</p>
-
 </br>
 
 You will be able to find all necessary documents, which you may possibly need to evaluate the project. If you particularly landed on this page to evaluate this project, you can [click here](#satellite-evaluation-guide) to jump the section which I've prepared as evaluation guide.
